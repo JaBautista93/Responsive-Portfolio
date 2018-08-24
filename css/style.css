@@ -158,6 +158,7 @@ h3, h2 {
 
 .work img {
   width: 100%;
+  height: 100%
   border: 0 none;
   opacity: 0.8;
 }
@@ -224,101 +225,72 @@ input[type=submit] {
   border: 0 none;
 }
 
-/* // This is for screen resizing //
-
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .main-section {
-    float: none;
+ /* This is the Media Queries */
+ /* make the position of the header static when this small
+Small devices (landscape phones, 640px and up) */
+@media (max-width: 640px) {
+  #masthead {
+    position: relative;
+    z-index: 99;
     width: 100%;
-    margin: 0%;
-    border: 0%;
-    }
-    .main-container {
-      padding-top: 0px;
-      min-height: 0px;
-    }
+    margin: 0 0 30px;
+    overflow: auto;
+    color: #fff;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
   }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
-  .main-section {
-    float: none;
-    width: 100%;
-    margin: 0%;
-    border: 0%;
-    }
-  }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { */
   
-}
-
-/* // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... } */
-
-/* // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
-@include media-breakpoint-up(sm) { ... }
-@include media-breakpoint-up(md) { ... }
-@include media-breakpoint-up(lg) { ... }
-@include media-breakpoint-up(xl) { ... }
-
-// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
-.custom-class {
-  display: none;
-}
-@include media-breakpoint-up(sm) {
-  .custom-class {
-    display: block;
-  }
-} */
-
-/* Additional Screen Sizes */
-
-/* Width at 320px and below */
-@media screen and (max-width: 320px) {
-  body {
-    background-color: #333;
+    .container {
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      clear: both; 
+      background-color: #ffffff;
+    } 
   }
 
-  .wrapper {
-    /* Box-model */
+// hide the header when this small
+// Medium devices (tablets, 768px and up)
+@media (Max-width: 768px) { 
+  #masthead {
+    position: fixed;
+    z-index: 99;
     width: 100%;
-    padding: 20px;
+    margin: 0 0 30px;
+    overflow: auto;
+    color: #fff;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+  }
+  
+    .container {
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+      clear: both; 
+    } 
   }
 
-  #main-content,
-  #sidebar {
+// Large devices (desktops, 980px and up)
+@media (max-width: 980px) {
+    #masthead {
+    position: fixed;
+    z-index: 99;
     width: 100%;
+    height: 100%;
+    margin: 0 0 30px;
+    overflow: auto;
+    color: #fff;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+    }
+    
+    .container {
+      width: 100%;
+      height: 100%
+      max-width: 980px;
+      margin: 0 auto;
+      clear: both; 
+    } 
   }
 
-  #sidebar {
-    margin-top: 40px;
-  }
-}
-
-/* Width at 168px and below */
-@media screen and (max-width: 168px) {
-  body {
-    background-color: #333;
-  }
-
-  .wrapper {
-    /* Box-model */
-    width: 100%;
-    padding: 20px;
-  }
-
-  #main-content,
-  #sidebar {
-    width: 100%;
-  }
-
-  #sidebar {
-    margin-top: 40px;
-  }
-}
