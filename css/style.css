@@ -149,7 +149,7 @@ h3, h2 {
   width: 274px;
   height:205px;
   margin: 20px 0 25px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .work:nth-child(even) {
